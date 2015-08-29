@@ -40,17 +40,19 @@
 
 ;; Define the format string to display in the agenda, see below for available wildcards
 ;; Data is licensed under cc by-sa, so we must display the "OpenWeatherMap" name
-(defvar org-weather-format "OpenWeatherMap: %desc, %tmin-%tmax%tu, %p%pu, %h%hu, %s%su")
+(defvar org-weather-format "%desc, %tmin-%tmax%tu, %p%pu, %h%hu, %s%su")
 
 ;; The api url, no need to change ususally
-(defvar org-weather-api-url "http://api.openweathermap.org/data/2.5/forecast/daily?q=%s&mode=json&units=metric&cnt=7")
+(defvar org-weather-api-url "http://api.openweathermap.org/data/2.5/forecast/daily?q=%s&mode=json&units=imperial&cnt=7")
 (defvar org-weather-api-timeout 2)
 
 ;; The units, just for displaying
-(defvar org-weather-temperature-unit "°C")
+;; (defvar org-weather-temperature-unit "°C")
+(defvar org-weather-temperature-unit "°F")
 (defvar org-weather-pressure-unit "hpa")
 (defvar org-weather-humidity-unit "%")
-(defvar org-weather-speed-unit "m/s")
+;; (defvar org-weather-speed-unit "m/s")
+(defvar org-weather-speed-unit "mph")
 
 ;; Variables for internal use only
 (defvar org-weather-initialized nil)
